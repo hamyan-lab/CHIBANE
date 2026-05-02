@@ -17,7 +17,7 @@ export default function Home({ onNavigate }: HomeProps) {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              'url(https://images.pexels.com/photos/3622614/pexels-photo-3622614.jpeg?auto=compress&cs=tinysrgb&w=1600)',
+              'url(/image.png)',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -25,15 +25,15 @@ export default function Home({ onNavigate }: HomeProps) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-28 w-full">
           <div className="max-w-2xl">
             <p className="text-amber-400 text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-              Nouvelle Collection
+              Collection Unisexe
             </p>
             <h1 className="text-white text-5xl md:text-7xl font-black leading-none mb-6 tracking-tight">
-              Soyez
+              Hoodie
               <br />
-              <span className="text-amber-400">vous-même.</span>
+              <span className="text-amber-400">Signature.</span>
             </h1>
             <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-              Des vêtements stylés, confortables et accessibles — pour que la mode soit enfin pour tout le monde.
+              Confortable, stylé et pour tous. Notre hoodie unisexe dans une palette de couleurs intemporelles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -44,10 +44,10 @@ export default function Home({ onNavigate }: HomeProps) {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-                onClick={() => onNavigate({ page: 'shop', category: 'soldes' })}
+                onClick={() => onNavigate({ page: 'product', productSlug: 'hoodie-unisexe-signature' })}
                 className="border border-white/50 text-white px-8 py-4 font-bold text-sm tracking-wide hover:bg-white/10 transition-colors rounded-full w-fit"
               >
-                Voir les soldes
+                Explorer les couleurs
               </button>
             </div>
           </div>
@@ -193,40 +193,40 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/5709661/pexels-photo-5709661.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/image copy.png"
                   alt="Notre histoire"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-amber-400 rounded-2xl p-6 hidden md:block">
-                <p className="text-gray-900 font-black text-3xl">12+</p>
-                <p className="text-gray-700 text-sm font-medium">pièces par saison</p>
+                <p className="text-gray-900 font-black text-3xl">6</p>
+                <p className="text-gray-700 text-sm font-medium">couleurs unisexe</p>
               </div>
             </div>
 
             <div>
-              <p className="text-amber-500 text-xs font-semibold tracking-[0.3em] uppercase mb-4">Notre histoire</p>
+              <p className="text-amber-500 text-xs font-semibold tracking-[0.3em] uppercase mb-4">Notre signature</p>
               <h2 className="text-gray-900 text-4xl md:text-5xl font-black leading-tight mb-6 tracking-tight">
-                La mode pour
+                Hoodie
                 <br />
-                tout le monde.
+                pour tous.
               </h2>
               <div className="space-y-4 text-gray-500 leading-relaxed">
                 <p>
-                  LIBRE est née d'un principe simple : embellir la vie de tous les hommes et de toutes les femmes avec des vêtements stylés, confortables et accessibles.
+                  Notre hoodie signature unisexe est pensé pour tous. Confortable, stylé et disponible dans une palette de couleurs intemporelles.
                 </p>
                 <p>
-                  C'est dans un esprit d'écoute des tendances et de la culture jeune que nous sélectionnons des vêtements de qualité — simples et originaux — choisis avec soin afin d'en faire bénéficier le plus grand nombre.
+                  Charcoal, Navy, Forest Green, Maroon et Dark Grey — six teintes pour s'exprimer, peu importe le genre ou la silhouette.
                 </p>
                 <p>
-                  Notre mission ? Rendre la mode plus accessible, tout en restant authentique et à l'écoute de notre public.
+                  Parce que la mode doit célébrer la liberté d'être soi-même, sans frontières.
                 </p>
               </div>
               <button
-                onClick={() => onNavigate({ page: 'shop' })}
+                onClick={() => onNavigate({ page: 'product', productSlug: 'hoodie-unisexe-signature' })}
                 className="mt-8 bg-gray-900 text-white px-8 py-4 font-bold text-sm tracking-wide hover:bg-amber-500 transition-colors rounded-full inline-flex items-center gap-2 group"
               >
-                Explorer la boutique
+                Découvrir le hoodie
                 <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
