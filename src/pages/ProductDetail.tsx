@@ -97,12 +97,12 @@ export default function ProductDetail({ slug, onNavigate }: ProductDetailProps) 
             <h1 className="text-gray-900 text-3xl md:text-4xl font-black leading-tight mb-4">{product.name}</h1>
 
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl font-black text-gray-900">{product.price.toFixed(2)} €</span>
+              <span className="text-3xl font-black text-gray-900">${product.price.toFixed(2)} CAD</span>
               {product.original_price && (
                 <>
-                  <span className="text-lg text-gray-400 line-through">{product.original_price.toFixed(2)} €</span>
+                  <span className="text-lg text-gray-400 line-through">${product.original_price.toFixed(2)} CAD</span>
                   <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full">
-                    Économisez {(product.original_price - product.price).toFixed(2)} €
+                    Économisez ${(product.original_price - product.price).toFixed(2)} CAD
                   </span>
                 </>
               )}

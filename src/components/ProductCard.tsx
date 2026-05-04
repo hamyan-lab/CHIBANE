@@ -54,9 +54,9 @@ export default function ProductCard({ product, onNavigate }: ProductCardProps) {
         <p className="text-xs text-gray-400 uppercase tracking-wider">{product.subcategory}</p>
         <h3 className="text-gray-900 font-semibold text-sm leading-snug">{product.name}</h3>
         <div className="flex items-center gap-2">
-          <span className="text-gray-900 font-bold">{product.price.toFixed(2)} €</span>
+          <span className="text-gray-900 font-bold">${product.price.toFixed(2)} CAD</span>
           {product.original_price && (
-            <span className="text-gray-400 text-sm line-through">{product.original_price.toFixed(2)} €</span>
+            <span className="text-gray-400 text-sm line-through">${product.original_price.toFixed(2)} CAD</span>
           )}
         </div>
         {product.sizes.length > 0 && (

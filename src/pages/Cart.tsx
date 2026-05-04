@@ -111,7 +111,7 @@ export default function Cart({ onNavigate }: CartProps) {
                       </button>
                     </div>
                     <span className="font-black text-gray-900">
-                      {(item.product.price * item.quantity).toFixed(2)} €
+                      ${(item.product.price * item.quantity).toFixed(2)} CAD
                     </span>
                   </div>
                 </div>
@@ -140,24 +140,24 @@ export default function Cart({ onNavigate }: CartProps) {
               <div className="space-y-3 py-4 border-t border-gray-200">
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Sous-total</span>
-                  <span>{totalPrice.toFixed(2)} €</span>
+                  <span>${totalPrice.toFixed(2)} CAD</span>
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
                   <span>Livraison</span>
                   <span className={shipping === 0 ? 'text-green-500 font-semibold' : ''}>
-                    {shipping === 0 ? 'Gratuite' : `${shipping.toFixed(2)} €`}
+                    {shipping === 0 ? 'Gratuite' : `$${shipping.toFixed(2)} CAD`}
                   </span>
                 </div>
                 {shipping > 0 && (
                   <p className="text-xs text-amber-600">
-                    Plus que {(60 - totalPrice).toFixed(2)} € pour la livraison gratuite
+                    Plus que ${(60 - totalPrice).toFixed(2)} CAD pour la livraison gratuite
                   </p>
                 )}
               </div>
 
               <div className="flex justify-between items-center py-4 border-t border-gray-200 mb-6">
                 <span className="font-black text-gray-900">Total</span>
-                <span className="font-black text-xl text-gray-900">{grandTotal.toFixed(2)} €</span>
+                <span className="font-black text-xl text-gray-900">${grandTotal.toFixed(2)} CAD</span>
               </div>
 
               <button className="w-full bg-gray-900 text-white py-4 rounded-full font-bold text-sm hover:bg-amber-500 transition-colors">
