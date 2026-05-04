@@ -10,14 +10,11 @@ interface ShopProps {
 }
 
 const CATEGORIES = [
-  { label: 'Tous', value: 'tous' },
-  { label: 'Homme', value: 'homme' },
-  { label: 'Femme', value: 'femme' },
   { label: 'Unisexe', value: 'unisexe' },
 ];
 
 const SUBCATEGORIES = [
-  'Tous', 't-shirt', 'hoodie', 'sweat', 'pantalon', 'veste', 'robe', 'chemise', 'accessoire',
+  'Tous', 'hoodie',
 ];
 
 const SORT_OPTIONS = [
@@ -27,14 +24,10 @@ const SORT_OPTIONS = [
 ];
 
 export default function Shop({ onNavigate, initialCategory }: ShopProps) {
-  const [category, setCategory] = useState(initialCategory || 'tous');
+  const [category, setCategory] = useState('unisexe');
   const [subcategory, setSubcategory] = useState('Tous');
   const [sort, setSort] = useState('new');
   const [filterOpen, setFilterOpen] = useState(false);
-
-  useEffect(() => {
-    if (initialCategory) setCategory(initialCategory);
-  }, [initialCategory]);
 
   const { products, loading } = useProducts(category);
 
